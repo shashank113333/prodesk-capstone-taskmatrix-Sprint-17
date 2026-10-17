@@ -1,10 +1,29 @@
-# Sprint 16 AI Architecture Prompts & Rationale Log
+# Sprint 17 AI Architecture, WPO & Deployment Rationale Log
 
 ## Author & Project Info
 - **Project**: TaskMatrix — Enterprise Agile Management System
-- **Sprint**: Sprint 16 (The AI Injection & Polish — Commercial-grade Finish)
+- **Sprint**: Sprint 17 (Deployment & Go Live — Production Launch & WPO)
 - **Track**: Track A (Frontend Specialist)
 - **Developer**: Shashank
+
+---
+
+## Sprint 17 Production Architecture & WPO Rationale
+
+### 1. Strict Compiler Optimization & Edge Build Pipeline
+- **Prompt Query**: "How to resolve strict compiler warnings and optimize Next.js 14 App Router for edge production deployment without build failure?"
+- **Engineering Rationale**: Executed strict Next.js compilation (`npm run build`). Isolated edge-compatible API routes (`/api/ai/generate-subtasks`) and implemented tree-shaking on icons and chart dependencies (`next/dynamic` for Recharts) to keep route bundles below 102 kB.
+
+### 2. Web Performance Optimization (WPO) & Lighthouse 90+ Target
+- **Prompt Query**: "What architectural patterns ensure a 90+ Lighthouse score in both Performance and Accessibility for dynamic Next.js dashboards?"
+- **Engineering Rationale**: 
+  - Standardized semantic HTML landmarks (`<header>`, `<main>`, `<section>`).
+  - Implemented accessible ARIA labels (`aria-label="Toggle Navigation Menu"`) and WCAG-compliant color contrast ratios across dark mode elements.
+  - Mitigated DOM asset bloat by replacing static binary images with lightweight dynamic SVG and code-generated favicons (`src/app/icon.tsx`).
+
+### 3. Edge Secrets Isolation & Cloud Environment Security
+- **Prompt Query**: "How to guarantee zero leakage of generative AI credentials during cloud CI/CD deployment on Vercel?"
+- **Engineering Rationale**: Strictly decoupled `GEMINI_API_KEY` from client bundles. All LLM operations execute through server-side route handlers on the Vercel Edge network, preventing client scraping.
 
 ---
 
