@@ -11,7 +11,7 @@ Sprint 17 represents the final production execution pipeline for **TaskMatrix** 
 ---
 
 ## 🌐 Live Application & Links
-- 🚀 **Live Website (Vercel)**: [https://prodesk-capstone-taskmatrix-sprint-17.vercel.app](https://prodesk-capstone-taskmatrix-sprint-17.vercel.app)
+- 🚀 **Live Website (Vercel)**: [https://prodesk-capstone-taskmatrix-sprint-rose.vercel.app](https://prodesk-capstone-taskmatrix-sprint-rose.vercel.app)
 - 📦 **GitHub Repository**: [https://github.com/shashank113333/prodesk-capstone-taskmatrix-Sprint-17](https://github.com/shashank113333/prodesk-capstone-taskmatrix-Sprint-17)
 - 📝 **AI Compliance Log**: Refer to [`Prompts.md`](./Prompts.md) for architectural decision logs.
 
